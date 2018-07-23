@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Assignment 1(JS)</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <style>
+        header {
+            background-color: rgb(11, 7, 226);
+            color: orange;
+            height: 70px;
+        }
+
+        img {
+            float: right;
+            width: 80px;
+            height: 70px;
+
+        }
+
+        div.questions {
+            display: flex;
+            justify-content: space-between;
+            display: none;
+        }
+
+        #refresh {
+            display: none;
+        }
+
+        section {
+            border-width: 5px;
+            border-style: ridge;
+            height: 200px;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <h1>
+            Assignment 1
+            <img src="revature.png">
+
+        </h1>
+    </header>
+    <br>
+    <p>Please select which question you would like to view!</p>
+
+    <!-- Attempted questions 3,6,7,9,11,12,15,10*/-->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button id="Assignment" class="btn btn-outline-secondary" type="button">Option</button>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option class="options" value="Question3">Question 3</option>
+            <option class="options" value="Question6">Question 6</option>
+            <option class="options" value="Question7">Question 7</option>
+            <option class="options" value="Question9">Question 9</option>
+            <option class="options" value="Question10">Question 10</option>
+            <option class="options" value="Question11">Question 11</option>
+            <option class="options" value="Question12">Question 12</option>
+            <option class="options" value="Question15">Question 15</option>
+        </select>
+        <button id="refresh" class="btn btn-info btn-block" type="button">Refresh</button>
+    </div>
+    <hr>
+    <div class="questions" id="Question3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h4>Question 3: Reverse the order of a string</h4>
+                    <label>Input:</label>
+                    <br>
+                    <input type="text" id="q3" class="form-control col-3">
+                    <button class="btn btn-primary" id="q3Button">Submit</button>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
+                <br>
+                <div class="col-md">
+                    <label>Output:</label>
+                    <br>
+                    <section id="q3Output"></section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="questions" id="Question6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h4>Question 6: Determine if a number is even or odd</h4>
+                    <label>Input:</label>
+                    <br>
+                    <input type="text" id="q6" class="form-control col-3">
+                    <button class="btn btn-primary" id="q6Button">Submit</button>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <br>
+                <div class="col-md">
+                    <label>Output:</label>
+                    <br>
+                    <section id="q6Output"></section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="questions" id="Question7">
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h4>Question 7: Determine if a word or phase os a Palindrome</h4>
+                    <label>Input:</label>
+                    <br>
+                    <input type="text" id="q7" class="form-control col-3">
+                    <button class="btn btn-primary" id="q7Button">Submit</button>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <br>
+                <div class="col-md">
+                    <label>Output:</label>
+                    <br>
+                    <section id="q7Output"></section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="questions" id="Question9">
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h4>Question 9: Printing an object property and values</h4>
+                    <label>Input:</label>
+                    <br>
+                    <input type="text" id="q9sub1" class="form-control col-3">
+                    <input type="text" id="q9sub2" class="form-control col-3">
+                    <input type="text" id="q9sub3" class="form-control col-3">
+                    <input type="number" id="q9sub4" class="form-control col-3">
+                    <input type="text" id="q9sub5" class="form-control col-3">
+                    <button class="btn btn-primary" id="q9Button">Submit</button>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <br>
+                <div class="col-md">
+                    <label>Output:</label>
+                    <br>
+                    <section id="q9Output">
+                        <ol id="things"></ol>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="questions" id="Question10">
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h4>Question 10: Deleting the third element</h4>
+                    <label>Input:</label>
+                    <br>
+                    <input type="text" id="q10" class="form-control col-3">
+                    <button class="btn btn-primary" id="q10Button">Submit</button>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <br>
+                <div class="col-md">
+                    <label>Output:</label>
+                    <br>
+                    <section id="q10Output">
+                        <span id="q10Out1"></span>
+                        <br>
+                        <span id="q10Out2"></span>
+                        <br>
+                        <span id="q10Out3"></span>
+                        <br>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="questions" id="Question11">
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h4>Question 11: Splicing the third element</h4>
+                    <label>Input:</label>
+                    <br>
+                    <input type="text" id="q11" class="form-control col-3">
+                    <button class="btn btn-primary" id="q11Button">Submit</button>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <br>
+                <div class="col-md">
+                    <label>Output:</label>
+                    <br>
+                    <section id="q11Output">
+                            <span id="q11Out1"></span>
+                            <br>
+                            <span id="q11Out2"></span>
+                            <br>
+                            <span id="q11Out3"></span>
+                            <br>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="questions" id="Question12">
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h4>Question 12: Creating an object</h4>
+                    <label>Input:</label>
+                    <br>
+                    <input type="text" id="q12Sub1" class="form-control col-3">
+                    <input type="text" id="q12Sub2" class="form-control col-3">
+                    <input type="number" id="q12Sub3" class="form-control col-3">
+                    <button class="btn btn-primary" id="q12Button">Submit</button>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <br>
+                <div class="col-md">
+                    <label>Output:</label>
+                    <br>
+                    <section id="q12Output"></section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="questions" id="Question15">
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h4>Question 15: Rearranging to create the highest number</h4>
+                    <label>Input:</label>
+                    <br>
+                    <input type="text" id="q15" class="form-control col-3">
+                    <button class="btn btn-primary" id="q15Button">Submit</button>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <br>
+                <div class="col-md">
+                    <label>Output:</label>
+                    <br>
+                    <section id="q15Output"></section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="homework1.js"></script>
+
+</body>
+
+</html>
